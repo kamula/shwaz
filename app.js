@@ -1,6 +1,9 @@
-setTimeout(() => {
-    console.log('time out')
-}, 2000)
+const http = require("http");
 
-console.log('hi')
-console.log('hello')
+const server = http.createServer((req, res) => {
+    console.log(req.url, req.method, req.headers);
+    res.setHeader("Content-Type", "text/html");
+    res.end();
+});
+
+server.listen(3000);
