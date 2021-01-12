@@ -6,7 +6,7 @@ let product = []
 const rootDir = require('../utils/path')
 router.get("/add-product", (req, res, next) => {
     console.log(req.body)
-    res.render('add_product', { pageTitle: "Add product" })
+    res.render('add_product', { pageTitle: "Add product", path: "/admin/add-product" })
 
 });
 router.post("/add-product", (req, res, next) => {
